@@ -20,14 +20,29 @@ function sendHandler() {
     var subject = document.getElementById("subject").value;
     var message = document.getElementById("comment").value;
 
-    var contactFields = [name, mail, subject, message];
+    var contactField = {"Name": name, "Mail": mail, "Subject": subject, "Comment": message};
 
-    for (var i = 0; i < contactFields.length; i++){
-        if (!contactFields[i]){
-            //Comment the line below if set required fields
-            alert("All fields need to be filled");
-            return;
+    for (var key in contactField){
+        if (contactField[key]){
+            delete contactField[key];
         }
     }
-    alert("Name: " + name + "\nEmail: " + mail + "\nSubject: " + subject + "\nYour message is: " + message);
+
+    // COMMENT: BAD BAD PRACTICE!! I WOULDN'T SHOW THIS IN AN ALERT MESSAGE
+    // FOR THE SAKE OF THE CLASS WORK HER YOU GO--->
+    //
+    //MARK: Comment if .required = true
+
+    if (Object.keys(contactField).length != 0) {
+        alert("Oops! Did you forget to fill these fields?\n" + Object.keys(contactField));
+    }else{
+        alert("Name: " + name + "\nEmail: " + mail + "\nSubject: " + subject + "\nYour message is: " + message);
+    }
+
+    //MARK: Uncomment if .required = true
+    //
+    // if(Object.keys(contactField).length == 0) {
+    //     alert("Name: " + name + "\nEmail: " + mail + "\nSubject: " + subject + "\nYour message is: " + message);
+    // }
+
 }
