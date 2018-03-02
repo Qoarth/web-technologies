@@ -1,11 +1,12 @@
 /////////////////////////////////////////////////////////
 // Author: Baris Cem Baykara
 //
-// Uncomment the lines for required fields to achive better user firendliness.
-// In case you decide to do that, comment out the alert message in the FOR condition
+// Uncomment the lines for required fields to achive better user firendliness in sendHandler().
+// In case you decide to do that, comment out the whole IF - ELSE statement marked below and uncomment the other one.
 // Marking the required fields are strongly recommended.
 /////////////////////////////////////////////////////////
 
+//Send button handler for onclick
 function sendHandler() {
 
 //MARK: Required Fields
@@ -45,4 +46,18 @@ function sendHandler() {
     //     alert("Name: " + name + "\nEmail: " + mail + "\nSubject: " + subject + "\nYour message is: " + message);
     // }
 
+}
+
+//Green button handler for onclick
+function greenButtonHandler(){
+    var button = document.getElementById("green-button");
+    button.style.backgroundColor =  "#1e1e24";
+    button.style.color = "#9b9bc4";
+    button.innerHTML = "Aww, thanks for touching me <3";
+}
+
+//Blue button handler for onclick
+function blueButtonHandler () {
+    var button = document.getElementById("blue-button");
+    button.href = "https://facebook.com/b.cembaykara";
 }
