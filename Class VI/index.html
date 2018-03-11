@@ -1,0 +1,45 @@
+<!-- ******************************************
+*  Author : Baris Cem Baykara   
+*  Created On : Sat Mar 10 2018
+*  File : index.html
+******************************************* -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Baris Cem Baykara">
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/requestHandler.js"></script>
+
+    <title>Currency Converter</title>
+</head>
+
+<body>
+    <div class="super">
+        <div class="container">
+            <h2 id="title">CurrentMe</h2>
+            <p id="mini-title">Simple currency calculator</p>
+            <div class="picker">
+                <select id="picker-from">
+                    <option value="EUR">EUR</option>
+                </select>
+                <button id="switch-button" ><img id = "icon" src = "resources/icon.svg"></button>
+                <select id="picker-to">
+                    <option value="default">Select Currency</option>
+                </select>
+            </div>
+            <div class="input">
+                <input class="input-field" id = "textField" placeholder="ENTER AMOUNT">
+                    <button id="search-button"><img id="search-img" src="resources/search.svg"></button>
+            </div>
+            <div class="result">
+                <p id="resultText"></p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
