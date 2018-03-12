@@ -9,8 +9,6 @@ $(document).ready(function () {
   const url = "http://data.fixer.io/api/";
   const access_key = "?access_key=ea0166aed8162018a4d24d9e951142a4";
 
-  console.log($("#picker-to").val())
-
   var symbols;
   var rates;
   let rate;
@@ -57,16 +55,26 @@ $(document).ready(function () {
     }
   });
 
+  $(document).keyup(function(event) {
+    if (event.keyCode == 13) {
+     $("#search-button").click();
+    }
+})
+
   $("#switch-button").click(function () {
     if ($("#picker-to").val() != null) {
       let tmp = $("#picker-from").val();
       if (isEur) {
         $("#picker-from").val($("#picker-to").val()).change();
+        $('#picker-from').attr('disabled', true);
+        $('#picker-to').attr('disabled', true);
         tmpTo = $("#picker-to").val();
         $("#picker-to").val(tmp).change();
         isEur = false;
       } else {
         $("#picker-from").val("EUR").change();
+        $('#picker-from').attr('disabled', false);
+        $('#picker-to').attr('disabled', false);
         $("#picker-to").val(tmpTo).change();
         isEur = true;
       }
