@@ -24,11 +24,11 @@ $(document).ready(function () {
       symbols = json.symbols
       $.each(symbols, function (key1, entry) {
         if (key1 == "EUR") {
-          $("#picker-from").append($('<option></option>').attr('value', key1).text(key1));
-          $("#picker-to").append($('<option></option>').attr('value', key1).text(key1));
+          $("#picker-from").append($('<option></option>').attr('value', key1).text(key1 + " - " + entry));
+          $("#picker-to").append($('<option></option>').attr('value', key1).text(key1 + " - " + entry));
         } else {
-          $("#picker-to").append($('<option></option>').attr('value', key1).text(key1));
-          $("#picker-from").append($('<option disabled = true></option>').attr('value', key1).text(key1));
+          $("#picker-to").append($('<option></option>').attr('value', key1).text(key1 + " - " + entry));
+          $("#picker-from").append($('<option disabled = true></option>').attr('value', key1).text(key1 + " - " + entry));
         }
       })
     },
