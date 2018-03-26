@@ -47,6 +47,25 @@
     color: #fefefe;
 }
 
+#indicator {
+    display: block;
+    height: 35px;
+}
+
+#left {
+    position: absolute;
+    display: inline-block;
+    left: 4px;
+    color: #fefefe;
+}
+
+#right {
+    position: absolute;
+    display: inline-block;
+    right: 4px;
+    color: #fefefe;
+}
+
 #switch-button {
     background-color: transparent;
     border: none;
