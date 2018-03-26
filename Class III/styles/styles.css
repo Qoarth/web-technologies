@@ -1,0 +1,49 @@
+/******************************************
+*  Author : Baris Cem Baykara   
+*  Created On : Mon Mar 26 2018
+*  File : styles.css
+*******************************************/
+
+h1 {
+    color: #9BC1BC;
+}
+
+img {
+    height: 120px;
+    width: 120px;
+    border-style: ridge;
+    border-color: #5D576B;
+}
+
+.container {
+    width: 500px;
+}
+.information-headers {
+    font-weight: bold;
+    color: #9BC1BC;
+}
+
+.information-fields {
+    font-weight: lighter;
+    font-style: oblique;
+    color: #ED6A5A;
+}
+
+#personalInf {
+    position: relative;
+    display: inline-block;
+    left: 15px;
+    top: 0px;
+}
+
+#image {
+    display: inline-block;
+}
+
+#button {
+    width: 100%;
+    background-color: #3b5998;
+    border: none;
+    border-radius: 5px;
+    color: azure;
+}
