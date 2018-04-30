@@ -7,7 +7,7 @@
 $(document).ready(function () {
 
   const url = "http://data.fixer.io/api/";
-  const access_key = "?access_key=ea0166aed8162018a4d24d9e951142a4";
+  const access_key = "?access_key=[API_KEY_HERE]";
 
   var symbols;
   var rates;
